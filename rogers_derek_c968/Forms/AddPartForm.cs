@@ -15,6 +15,29 @@ namespace rogers_derek_c968.Forms
         public AddPartForm()
         {
             InitializeComponent();
+
+            //In-House/Outsourced Radio button
+            radio_InHouse.CheckedChanged += RadioChanged;
+            radio_Outsourced.CheckedChanged += RadioChanged;
+            //Sets default to In-House
+            radio_InHouse.Checked = true;
+
         }
+
+        //Listens for radio state change
+        private void RadioChanged(object sender, EventArgs e)
+        {
+            if (radio_InHouse.Checked)
+            {
+                lbl_Special.Text = "Machine ID";
+            }
+            else if (radio_Outsourced.Checked)
+            {
+                lbl_Special.Text = "Company Name";
+            }
+            //Clears form on change
+            txt_Special.Text = string.Empty;
+        }
+
     }
 }
