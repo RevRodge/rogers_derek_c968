@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             groupBox = new GroupBox();
+            btn_Cancel = new Button();
+            btn_Save = new Button();
             radio_Outsourced = new RadioButton();
             radio_InHouse = new RadioButton();
             txt_Min = new TextBox();
@@ -45,8 +47,6 @@
             lbl_Price = new Label();
             lbl_Name = new Label();
             lbl_ID = new Label();
-            btn_Save = new Button();
-            btn_Cancel = new Button();
             groupBox.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,6 +78,27 @@
             groupBox.TabIndex = 0;
             groupBox.TabStop = false;
             groupBox.Text = "Add Part";
+            // 
+            // btn_Cancel
+            // 
+            btn_Cancel.BackColor = SystemColors.ButtonFace;
+            btn_Cancel.Location = new Point(221, 361);
+            btn_Cancel.Name = "btn_Cancel";
+            btn_Cancel.Size = new Size(75, 31);
+            btn_Cancel.TabIndex = 17;
+            btn_Cancel.Text = "Cancel";
+            btn_Cancel.UseVisualStyleBackColor = false;
+            // 
+            // btn_Save
+            // 
+            btn_Save.BackColor = SystemColors.ButtonFace;
+            btn_Save.Location = new Point(113, 361);
+            btn_Save.Name = "btn_Save";
+            btn_Save.Size = new Size(75, 31);
+            btn_Save.TabIndex = 16;
+            btn_Save.Text = "Save";
+            btn_Save.UseVisualStyleBackColor = false;
+            btn_Save.Click += btn_Save_Click_1;
             // 
             // radio_Outsourced
             // 
@@ -147,6 +168,7 @@
             // 
             // txt_ID
             // 
+            txt_ID.Enabled = false;
             txt_ID.Location = new Point(140, 57);
             txt_ID.Name = "txt_ID";
             txt_ID.Size = new Size(211, 27);
@@ -228,26 +250,6 @@
             lbl_ID.TabIndex = 0;
             lbl_ID.Text = "ID";
             lbl_ID.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // btn_Save
-            // 
-            btn_Save.BackColor = SystemColors.ButtonFace;
-            btn_Save.Location = new Point(113, 361);
-            btn_Save.Name = "btn_Save";
-            btn_Save.Size = new Size(75, 31);
-            btn_Save.TabIndex = 16;
-            btn_Save.Text = "Save";
-            btn_Save.UseVisualStyleBackColor = false;
-            // 
-            // btn_Cancel
-            // 
-            btn_Cancel.BackColor = SystemColors.ButtonFace;
-            btn_Cancel.Location = new Point(221, 361);
-            btn_Cancel.Name = "btn_Cancel";
-            btn_Cancel.Size = new Size(75, 31);
-            btn_Cancel.TabIndex = 17;
-            btn_Cancel.Text = "Cancel";
-            btn_Cancel.UseVisualStyleBackColor = false;
             // 
             // AddPartForm
             // 
