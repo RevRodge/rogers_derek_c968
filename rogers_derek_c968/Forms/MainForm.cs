@@ -15,11 +15,26 @@ namespace rogers_derek_c968
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //If no data exists, this creates some for testing
             if (Inventory.AllParts.Count == 0 && Inventory.Products.Count == 0)
             {
-                //TODO: make some test data to add if nothing exists
+                Inventory.AddPart(new InHouse { PartID = 1, Name = "Fuse Housing", InStock = 100, Price = 0.50m, Min = 10, Max = 200, MachineID = 123 });
+                Inventory.AddPart(new Outsourced { PartID = 2, Name = "Transistor", InStock = 50, Price = 1.25m, Min = 5, Max = 100, CompanyName = "Globo Corp" });
+
+                var prod = new Product
+                {
+                    ProductID = 1,
+                    Name = "Humanoid Robot",
+                    InStock = 25,
+                    Price = 9.99m,
+                    Min = 5,
+                    Max = 50
+                };
+                prod.addAssociatedPart(Inventory.AllParts[0]);
+                Inventory.AddProduct(prod);
             }
-            //Load grid view with inventory contents
+
+            //Load grid view with existing inventory contents
             gridView_Parts.DataSource = Inventory.AllParts;
             gridView_Prod.DataSource = Inventory.Products;
         }
@@ -96,7 +111,7 @@ namespace rogers_derek_c968
         {
             if (gridView_Parts.CurrentRow?.DataBoundItem is Part selectedPart)
             {
-                DialogResult confirm = MessageBox.Show("Are you sure you want to delete this part?", "Confirm", MessageBoxButtons.YesNo);
+                DialogResult confirm = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.YesNo);
                 if (confirm == DialogResult.Yes)
                 {
                     if (!Inventory.DeletePart(selectedPart))
@@ -131,7 +146,7 @@ namespace rogers_derek_c968
                     return;
                 }
 
-                DialogResult confirm = MessageBox.Show("Are you sure you want to delete this product?", "Confirm", MessageBoxButtons.YesNo);
+                DialogResult confirm = MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.YesNo);
                 if (confirm == DialogResult.Yes)
                 {
                     if (!Inventory.RemoveProduct(selectedProduct.ProductID))
