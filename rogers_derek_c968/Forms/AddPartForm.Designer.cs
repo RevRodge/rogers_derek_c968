@@ -88,6 +88,7 @@
             btn_Cancel.TabIndex = 17;
             btn_Cancel.Text = "Cancel";
             btn_Cancel.UseVisualStyleBackColor = false;
+            btn_Cancel.Click += btn_Cancel_Click;
             // 
             // btn_Save
             // 
@@ -98,7 +99,7 @@
             btn_Save.TabIndex = 16;
             btn_Save.Text = "Save";
             btn_Save.UseVisualStyleBackColor = false;
-            btn_Save.Click += btn_Save_Click_1;
+            btn_Save.Click += btn_Save_Click;
             // 
             // radio_Outsourced
             // 

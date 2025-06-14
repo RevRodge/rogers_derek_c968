@@ -45,7 +45,13 @@ namespace rogers_derek_c968.Forms
             int highestID = Inventory.AllParts.Any() ? Inventory.AllParts.Max(p => p.PartID) : 0;
             return highestID + 1;
         }
-        // --------------------------------------- Save Button Event Handling
+        // --------------------------------------- Button Event Handling
+        // Cancel button closes dialog box
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        //Save button validates input and adds part to inventory with auto gen'd ID
         private void btn_Save_Click(object sender, EventArgs e)
         {
             //uses a try/catch to validate numeric input
