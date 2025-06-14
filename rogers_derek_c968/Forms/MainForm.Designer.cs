@@ -59,7 +59,6 @@
             title.Size = new Size(280, 25);
             title.TabIndex = 0;
             title.Text = "Inventory Management System";
-            title.Click += label1_Click;
             // 
             // btn_PartSearch
             // 
@@ -130,7 +129,7 @@
             btn_PartMod.TabIndex = 10;
             btn_PartMod.Text = "Modify";
             btn_PartMod.UseVisualStyleBackColor = false;
-            btn_PartMod.Click += button4_Click;
+            btn_PartMod.Click += btn_PartMod_Click;
             // 
             // btn_PartDel
             // 
@@ -182,7 +181,7 @@
             btn_Exit.TabIndex = 15;
             btn_Exit.Text = "Exit";
             btn_Exit.UseVisualStyleBackColor = false;
-            btn_Exit.Click += button9_Click;
+            btn_Exit.Click += btn_Exit_Click;
             // 
             // grpBox_Parts
             // 
