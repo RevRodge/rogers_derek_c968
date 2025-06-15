@@ -18,8 +18,8 @@ namespace rogers_derek_c968.Models
         public int Max { get; set; }
 
         // For editing all parts underneath/within a product
-        public void AddAssociatedPart(Part part) => AssociatedParts.Add(part);
-        public bool RemoveAssociatedPart(int partID)
+        public void addAssociatedPart(Part part) => AssociatedParts.Add(part);
+        public bool removeAssociatedPart(int partID)
         {
             //returns matching part or null
             var part = AssociatedParts.FirstOrDefault(p => p.PartID == partID);
