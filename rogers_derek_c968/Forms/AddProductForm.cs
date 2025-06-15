@@ -38,17 +38,20 @@ namespace rogers_derek_c968.Forms
                 else
                 {
                     MessageBox.Show("Part not found.");
+                    txt_PartSearch.Clear();
                 }
             }
             else
             {
                 MessageBox.Show("Please enter a valid Part ID.");
+                txt_PartSearch.Clear();
             }
         }
         //adds selected candidate part over to grid for associated parts
         private void btn_AddPart_Click(object sender, EventArgs e)
         {
-            if (grid_AllParts.CurrentRow?.DataBoundItem is Part selectedPart)
+            //verifies part exists and isn't already associated to product
+            if (grid_AllParts.CurrentRow?.DataBoundItem is Part selectedPart && !_associatedParts.Contains(selectedPart))
             {
                 _associatedParts.Add(selectedPart);
             }

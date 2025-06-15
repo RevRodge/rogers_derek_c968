@@ -422,12 +422,6 @@
         private DataGridViewTextBoxColumn Max;
         private Button btn_AddPart;
         private DataGridView grid_AssociatedParts;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private Label lbl_AllParts;
         private Label lbl_AssociatedParts;
         private TextBox txt_PartSearch;
