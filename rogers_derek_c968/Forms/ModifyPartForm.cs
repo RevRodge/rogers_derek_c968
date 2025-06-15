@@ -61,6 +61,11 @@ namespace rogers_derek_c968.Forms
             }
             
         }
+        // Cancel button closes dialog box
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         //Modified Version of the Save method from my AddPartForm
         private void btn_Save_Click(object sender, EventArgs e)
         {
@@ -141,6 +146,7 @@ namespace rogers_derek_c968.Forms
             {
                 MessageBox.Show("All numeric fields must be valid numbers.");
             }
+
         }
     }
 }

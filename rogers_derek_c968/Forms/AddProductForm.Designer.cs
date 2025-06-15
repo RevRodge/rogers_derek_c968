@@ -53,6 +53,11 @@
             lbl_AssociatedParts = new Label();
             lbl_AllParts = new Label();
             btn_PartSearch = new Button();
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            this.btn_AddPart.Click += new System.EventHandler(this.btn_AddPart_Click);
+            this.btn_RemovePart.Click += new System.EventHandler(this.btn_RemovePart_Click);
+            this.btn_PartSearch.Click += new System.EventHandler(this.btn_PartSearch_Click);
             groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grid_AllParts).BeginInit();
             ((System.ComponentModel.ISupportInitialize)grid_AssociatedParts).BeginInit();

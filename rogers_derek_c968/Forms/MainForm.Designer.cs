@@ -42,6 +42,15 @@
             btn_ProdMod = new Button();
             btn_ProdAdd = new Button();
             btn_Exit = new Button();
+            this.btn_PartAdd.Click += new System.EventHandler(this.btn_PartAdd_Click);
+            this.btn_PartMod.Click += new System.EventHandler(this.btn_PartMod_Click);
+            this.btn_PartDel.Click += new System.EventHandler(this.btn_PartDel_Click);
+            this.btn_ProdAdd.Click += new System.EventHandler(this.btn_ProdAdd_Click);
+            this.btn_ProdMod.Click += new System.EventHandler(this.btn_ProdMod_Click);
+            this.btn_ProdDel.Click += new System.EventHandler(this.btn_ProdDel_Click);
+            this.btn_PartSearch.Click += new System.EventHandler(this.btn_PartSearch_Click);
+            this.btn_ProdSearch.Click += new System.EventHandler(this.btn_ProdSearch_Click);
+            this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
             grpBox_Parts = new GroupBox();
             grpBox_Prod = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)gridView_Parts).BeginInit();
@@ -238,7 +247,7 @@
         }
 
         #endregion
-        
+
         private Label title;
         private GroupBox grpBox_Parts;
         private GroupBox grpBox_Prod;
