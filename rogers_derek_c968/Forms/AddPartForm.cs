@@ -91,8 +91,13 @@ namespace rogers_derek_c968.Forms
 
                 //checks radio button state to determine where to save part
                 if (radio_InHouse.Checked)
-                {                    
-                    int machineID = int.Parse(txt_Special.Text);
+                {
+                    //Input validation for Machine Id, checks for Integer
+                    if (!int.TryParse(txt_Special.Text, out int machineID))
+                    {
+                        MessageBox.Show("Machine ID must be a valid number.");
+                        return;
+                    }
                     InHouse part = new InHouse
                     {
                         PartID = id,
