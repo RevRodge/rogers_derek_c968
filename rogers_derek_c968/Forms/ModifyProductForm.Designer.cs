@@ -1,4 +1,6 @@
-﻿namespace rogers_derek_c968.Forms
+﻿using System.Windows.Forms;
+
+namespace rogers_derek_c968.Forms
 {
     partial class ModifyProductForm
     {
@@ -28,43 +30,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            groupBox = new GroupBox();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            groupBox = new GroupBox();
-            btn_PartSearch = new Button();
-            lbl_AllParts = new Label();
-            lbl_AssociatedParts = new Label();
-            txt_PartSearch = new TextBox();
-            btn_AddPart = new Button();
             grid_AssociatedParts = new DataGridView();
-            assocPartID = new DataGridViewTextBoxColumn();
-            assocPartName = new DataGridViewTextBoxColumn();
-            assocInventory = new DataGridViewTextBoxColumn();
-            assocPrice = new DataGridViewTextBoxColumn();
-            assocMin = new DataGridViewTextBoxColumn();
-            assocMax = new DataGridViewTextBoxColumn();
             grid_AllParts = new DataGridView();
-            PartID = new DataGridViewTextBoxColumn();
-            PartName = new DataGridViewTextBoxColumn();
-            InventoryLevel = new DataGridViewTextBoxColumn();
-            Price = new DataGridViewTextBoxColumn();
-            Min = new DataGridViewTextBoxColumn();
-            Max = new DataGridViewTextBoxColumn();
-            btn_Save = new Button();
-            btn_Cancel = new Button();
-            btn_RemovePart = new Button();
+            txt_PartSearch = new TextBox();            
+            txt_Max = new TextBox();
+            txt_ID = new TextBox();                       
             txt_Min = new TextBox();
             txt_Name = new TextBox();
             txt_Inventory = new TextBox();
             txt_Price = new TextBox();
-            txt_Max = new TextBox();
-            txt_ID = new TextBox();
+            lbl_AllParts = new Label();
+            lbl_AssociatedParts = new Label();
             lbl_Min = new Label();
             lbl_Max = new Label();
             lbl_Inventory = new Label();
             lbl_Price = new Label();
             lbl_Name = new Label();
             lbl_ID = new Label();
+            btn_AddPart = new Button();
+            btn_PartSearch = new Button();
+            btn_Save = new Button();
+            btn_Cancel = new Button();
+            btn_RemovePart = new Button();
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             this.btn_AddPart.Click += new System.EventHandler(this.btn_AddPart_Click);
@@ -156,70 +146,61 @@
             btn_AddPart.TabIndex = 21;
             btn_AddPart.Text = "Add";
             btn_AddPart.UseVisualStyleBackColor = false;
-            // 
-            // grid_AssociatedParts
-            // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            grid_AssociatedParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            grid_AssociatedParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grid_AssociatedParts.Columns.AddRange(new DataGridViewColumn[] { assocPartID, assocPartName, assocInventory, assocPrice, assocMin, assocMax });
-            grid_AssociatedParts.Location = new Point(430, 364);
-            grid_AssociatedParts.Name = "grid_AssociatedParts";
-            grid_AssociatedParts.Size = new Size(644, 199);
-            grid_AssociatedParts.TabIndex = 20;
-            // 
-            // assocPartID
-            // 
-            assocPartID.HeaderText = "Part ID";
-            assocPartID.Name = "assocPartID";
-            // 
-            // assocPartName
-            // 
-            assocPartName.HeaderText = "Part Name";
-            assocPartName.Name = "assocPartName";
-            // 
-            // assocInventory
-            // 
-            assocInventory.HeaderText = "Inventory";
-            assocInventory.Name = "assocInventory";
-            // 
-            // assocPrice
-            // 
-            assocPrice.HeaderText = "Price";
-            assocPrice.Name = "assocPrice";
-            // 
-            // assocMin
-            // 
-            assocMin.HeaderText = "Min";
-            assocMin.Name = "assocMin";
-            // 
-            // assocMax
-            // 
-            assocMax.HeaderText = "Max";
-            assocMax.Name = "assocMax";
+            
             // 
             // grid_AllParts
             // 
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = SystemColors.ControlLight;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 10F);
             dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             grid_AllParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             grid_AllParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            grid_AllParts.Columns.AddRange(new DataGridViewColumn[] { PartID, PartName, InventoryLevel, Price, Min, Max });
             grid_AllParts.Location = new Point(430, 83);
             grid_AllParts.Name = "grid_AllParts";
             grid_AllParts.Size = new Size(644, 199);
             grid_AllParts.TabIndex = 19;
+            PartID = new DataGridViewTextBoxColumn();
+            PartID.HeaderText = "Part ID";
+            PartID.Name = "partID";
+
+            PartName = new DataGridViewTextBoxColumn();
+            PartName.HeaderText = "Part Name";
+            PartName.Name = "partName";
+
+            InventoryLevel = new DataGridViewTextBoxColumn();
+            InventoryLevel.HeaderText = "Inventory";
+            InventoryLevel.Name = "inventory";
+
+            Price = new DataGridViewTextBoxColumn();
+            Price.HeaderText = "Price";
+            Price.Name = "price";
+
+            Min = new DataGridViewTextBoxColumn();
+            Min.HeaderText = "Min";
+            Min.Name = "min";
+
+            Max = new DataGridViewTextBoxColumn();
+            Max.HeaderText = "Max";
+            Max.Name = "max";
+
+            grid_AllParts.Columns.AddRange(new DataGridViewColumn[] {
+                PartID,
+                PartName,
+                InventoryLevel,
+                Price,
+                Min,
+                Max
+            });
+            PartID.DataPropertyName = "PartID";
+            PartName.DataPropertyName = "Name";
+            InventoryLevel.DataPropertyName = "InStock";
+            Price.DataPropertyName = "Price";
+            Min.DataPropertyName = "Min";
+            Max.DataPropertyName = "Max";
             // 
             // PartID
             // 
@@ -250,6 +231,90 @@
             // 
             Max.HeaderText = "Max";
             Max.Name = "Max";
+            // 
+            // grid_AssociatedParts
+            // 
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.ControlLight;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            grid_AssociatedParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            grid_AssociatedParts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            grid_AssociatedParts.Location = new Point(430, 364);
+            grid_AssociatedParts.Name = "grid_AssociatedParts";
+            grid_AssociatedParts.Size = new Size(644, 199);
+            grid_AssociatedParts.TabIndex = 20;
+            var assocPartID = new DataGridViewTextBoxColumn();
+            assocPartID.HeaderText = "Part ID";
+            assocPartID.Name = "assocPartID";
+
+            var assocPartName = new DataGridViewTextBoxColumn();
+            assocPartName.HeaderText = "Part Name";
+            assocPartName.Name = "assocPartName";
+
+            var assocInventory = new DataGridViewTextBoxColumn();
+            assocInventory.HeaderText = "Inventory";
+            assocInventory.Name = "assocInventory";
+
+            var assocPrice = new DataGridViewTextBoxColumn();
+            assocPrice.HeaderText = "Price";
+            assocPrice.Name = "assocPrice";
+
+            var assocMin = new DataGridViewTextBoxColumn();
+            assocMin.HeaderText = "Min";
+            assocMin.Name = "assocMin";
+
+            var assocMax = new DataGridViewTextBoxColumn();
+            assocMax.HeaderText = "Max";
+            assocMax.Name = "assocMax";
+
+            grid_AssociatedParts.Columns.AddRange(new DataGridViewColumn[] {
+                assocPartID,
+                assocPartName,
+                assocInventory,
+                assocPrice,
+                assocMin,
+                assocMax
+            });
+            assocPartID.DataPropertyName = "PartID";
+            assocPartName.DataPropertyName = "Name";
+            assocInventory.DataPropertyName = "InStock";
+            assocPrice.DataPropertyName = "Price";
+            assocMin.DataPropertyName = "Min";
+            assocMax.DataPropertyName = "Max";
+            // 
+            // assocPartID
+            // 
+            assocPartID.HeaderText = "Part ID";
+            assocPartID.Name = "assocPartID";
+            // 
+            // assocPartName
+            // 
+            assocPartName.HeaderText = "Part Name";
+            assocPartName.Name = "assocPartName";
+            // 
+            // assocInventory
+            // 
+            assocInventory.HeaderText = "Inventory";
+            assocInventory.Name = "assocInventory";
+            // 
+            // assocPrice
+            // 
+            assocPrice.HeaderText = "Price";
+            assocPrice.Name = "assocPrice";
+            // 
+            // assocMin
+            // 
+            assocMin.HeaderText = "Min";
+            assocMin.Name = "assocMin";
+            // 
+            // assocMax
+            // 
+            assocMax.HeaderText = "Max";
+            assocMax.Name = "assocMax";
             // 
             // btn_Save
             // 

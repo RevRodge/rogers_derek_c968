@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            groupBox = new GroupBox();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            groupBox = new GroupBox();
-            btn_Cancel = new Button();
-            btn_Save = new Button();
+            grid_AllParts = new DataGridView();
+            grid_AssociatedParts = new DataGridView();                        
             txt_Min = new TextBox();
             txt_Name = new TextBox();
             txt_Inventory = new TextBox();
             txt_Price = new TextBox();
             txt_Max = new TextBox();
             txt_ID = new TextBox();
+            txt_PartSearch = new TextBox();
             lbl_Min = new Label();
             lbl_Max = new Label();
             lbl_Inventory = new Label();
             lbl_Price = new Label();
             lbl_Name = new Label();
             lbl_ID = new Label();
-            btn_RemovePart = new Button();
-            grid_AllParts = new DataGridView();
-            grid_AssociatedParts = new DataGridView(); 
-            btn_AddPart = new Button();
-            txt_PartSearch = new TextBox();
             lbl_AssociatedParts = new Label();
             lbl_AllParts = new Label();
+            btn_RemovePart = new Button(); 
+            btn_AddPart = new Button();            
+            btn_Cancel = new Button();
+            btn_Save = new Button();
             btn_PartSearch = new Button();
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -285,6 +285,12 @@
                 Min,
                 Max
             });
+            PartID.DataPropertyName = "PartID";
+            PartName.DataPropertyName = "Name";
+            InventoryLevel.DataPropertyName = "InStock";
+            Price.DataPropertyName = "Price";
+            Min.DataPropertyName = "Min";
+            Max.DataPropertyName = "Max";
             // 
             // grid_AssociatedParts
             // 
@@ -333,6 +339,12 @@
                 assocMin,
                 assocMax
             });
+            assocPartID.DataPropertyName = "PartID";
+            assocPartName.DataPropertyName = "Name";
+            assocInventory.DataPropertyName = "InStock";
+            assocPrice.DataPropertyName = "Price";
+            assocMin.DataPropertyName = "Min";
+            assocMax.DataPropertyName = "Max";
 
 
             // 

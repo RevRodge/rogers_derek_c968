@@ -33,10 +33,6 @@
             btn_Save = new Button();
             radio_Outsourced = new RadioButton();
             radio_InHouse = new RadioButton();
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
-            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
-            this.radio_InHouse.CheckedChanged += new System.EventHandler(this.RadioChanged);
-            this.radio_Outsourced.CheckedChanged += new System.EventHandler(this.RadioChanged);
             txt_Min = new TextBox();
             txt_Name = new TextBox();
             txt_Inventory = new TextBox();
@@ -51,6 +47,10 @@
             lbl_Price = new Label();
             lbl_Name = new Label();
             lbl_ID = new Label();
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            this.radio_InHouse.CheckedChanged += new System.EventHandler(this.RadioChanged);
+            this.radio_Outsourced.CheckedChanged += new System.EventHandler(this.RadioChanged);
             groupBox.SuspendLayout();
             SuspendLayout();
             // 

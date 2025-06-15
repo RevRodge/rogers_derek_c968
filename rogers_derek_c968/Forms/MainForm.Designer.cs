@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             title = new Label();
+            grpBox_Parts = new GroupBox();
+            grpBox_Prod = new GroupBox();
             btn_PartSearch = new Button();
             gridView_Parts = new DataGridView();
             gridView_Prod = new DataGridView();
@@ -51,8 +53,6 @@
             this.btn_PartSearch.Click += new System.EventHandler(this.btn_PartSearch_Click);
             this.btn_ProdSearch.Click += new System.EventHandler(this.btn_ProdSearch_Click);
             this.btn_Exit.Click += new System.EventHandler(this.btn_Exit_Click);
-            grpBox_Parts = new GroupBox();
-            grpBox_Prod = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)gridView_Parts).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView_Prod).BeginInit();
             grpBox_Parts.SuspendLayout();
