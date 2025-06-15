@@ -103,7 +103,7 @@
             btn_Save.TabIndex = 16;
             btn_Save.Text = "Save";
             btn_Save.UseVisualStyleBackColor = false;
-            btn_Save.Click += btn_Save_Click;
+            //btn_Save.Click += btn_Save_Click;
             // 
             // radio_Outsourced
             // 
