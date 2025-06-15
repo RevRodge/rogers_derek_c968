@@ -16,7 +16,7 @@ namespace rogers_derek_c968
         private void MainForm_Load(object sender, EventArgs e)
         {
             //If no data exists, this creates some for testing
-            if (Inventory.AllParts.Count == 0 && Inventory.Products.Count == 0)
+            /*if (Inventory.AllParts.Count == 0 && Inventory.Products.Count == 0)
             {
                 Inventory.AddPart(new InHouse { PartID = 1, Name = "Fuse Housing", InStock = 100, Price = 0.50m, Min = 10, Max = 200, MachineID = 123 });
                 Inventory.AddPart(new Outsourced { PartID = 2, Name = "Transistor", InStock = 50, Price = 1.25m, Min = 5, Max = 100, CompanyName = "Globo Corp" });
@@ -32,7 +32,7 @@ namespace rogers_derek_c968
                 };
                 prod.addAssociatedPart(Inventory.AllParts[0]);
                 Inventory.AddProduct(prod);
-            }
+            }*/
 
             //Load grid view with existing inventory contents
             gridView_Parts.DataSource = Inventory.AllParts;
